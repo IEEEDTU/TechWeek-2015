@@ -1,0 +1,1 @@
+(function(a){a.instrument_function=function(c){return function(){try{return c.apply(this,arguments)}catch(b){throw b.stack&&a.Honeybadger&&0===parseInt(10*Math.random(),10)&&Honeybadger.notify(b,{current_project:a.current_project,current_user:a.current_user}),b;}}}})(this);
