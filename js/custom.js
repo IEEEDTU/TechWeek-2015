@@ -29,7 +29,7 @@ $(document).ready(function () {
 	for ( i = 0 ; i < sections.length ; i++ ) {
 		j = sections[i];
 		chapter[i] = parseInt($(j).data("chapter").substr(6,8));//Chapter numbers array
-		$("ul.moments-index-list").append("<li data-linkTo="+chapter[i]+"><a href='#'>"+sectionsTitle[i]+"</a></li>");
+		$("ul.moments-index-list").append("<li data-linkto="+chapter[i]+"><a href='#'>"+sectionsTitle[i]+"</a></li>");
 	}
 	return chapter, sections;
 });
@@ -50,7 +50,21 @@ $(window).load(function () {
 	});
 	
 	$("ul.moments-index-list li").click(function () {
-		//$(this).data("linkTo")
+		var linkTo = parseInt($(this).data("linkto"));//chapter number requested
+		var sectTo = $(sections[linkTo]);
+		console.log(linkTo+"\n"+sectTo);
+		$("div.moments-index").toggleClass("show");
+		$(sections).not(sectTo).hide();
+		sectTo.show();
+		//Button visibility correction
+		if(linkTo === (sections.length - 1)) {
+			$("button.trigger-backward").show();
+			$("button.trigger-forward").hide();
+		}
+		if(linkTo === 0) {
+			$("button.trigger-backward").hide();
+			$("button.trigger-forward").show();
+		}
 	});
 	
 	$("button.js-trigger").click(function () {
@@ -64,13 +78,13 @@ $(window).load(function () {
 			$("button.trigger-backward").show();
 			$($(sections[nextChapter])).fadeIn();
 			$($(sections[visibleChapter])).fadeOut();
-			if(nextChapter == (sections.length - 1)) $("button.trigger-forward").hide();
+			if(nextChapter === (sections.length - 1)) $("button.trigger-forward").hide();
 		}
 		else {
 			$("button.trigger-forward").show();
 			$($(sections[prevChapter])).fadeIn();
 			$($(sections[visibleChapter])).fadeOut();
-			if(prevChapter == 0) $("button.trigger-backward").hide();
+			if(prevChapter === 0) $("button.trigger-backward").hide();
 		}
 	});
 });
