@@ -21,9 +21,6 @@ $(document).ready(function () {
 	sectionsTitle[15] = "Event";
 	sectionsTitle[16] = "Event";
 	sectionsTitle[17] = "Event";
-	sectionsTitle[18] = "Event";
-	sectionsTitle[19] = "Event";
-	sectionsTitle[20] = "Event";
 	//Fetch all sections and make queue
 	sections = $("section.moment");//Tags array
 	for ( i = 0 ; i < sections.length ; i++ ) {
@@ -50,9 +47,9 @@ $(window).load(function () {
 	});
 	
 	$("ul.moments-index-list li").click(function () {
+		$("button.trigger-backward").show();
 		var linkTo = parseInt($(this).data("linkto"));//chapter number requested
 		var sectTo = $(sections[linkTo]);
-		console.log(linkTo+"\n"+sectTo);
 		$("div.moments-index").toggleClass("show");
 		$(sections).not(sectTo).hide();
 		sectTo.show();
