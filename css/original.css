@@ -3551,12 +3551,18 @@ a .editorial-list-module {
   display: table;
   width: 100%;
   height: 100%;
-  position: relative
+  
 }
 
 .full-viewport-hero__content {
   text-align: center;
-  position: relative
+  position : absolute;
+   top : 0;
+  bottom : 0;
+  right : 0;
+  left  : 0;
+margin : auto;
+margin-top:10%;
 }
 
 .full-viewport-hero__content .title {
