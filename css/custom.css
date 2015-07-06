@@ -24,6 +24,18 @@ section:nth-of-type(1) {
   .event_01 .copy .wrap {
     width: 55%
   }
+.full-spread .copy .event.title {
+  width: 70%;
+}
+.copy .event.title {
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+
+
 }
 
 .event_02 .asset-1 {

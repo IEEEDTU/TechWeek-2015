@@ -6432,13 +6432,13 @@ h1.test {
   font-weight: bold
 }
 
-.copy:before {
+/*.copy:before {
   content: '';
   display: inline-block;
   height: 100%;
   vertical-align: middle;
   margin-right: -0.25em
-}
+}*/
 
 .copy .wrap {
   display: inline-block;
@@ -6510,7 +6510,8 @@ h1.test {
 .full-spread .copy {
   height: 100%;
   text-align: center;
-  width: 100%
+  width: 100%;
+  margin-top:13%;
 }
 
 .full-spread .copy .wrap {
@@ -6532,24 +6533,122 @@ h1.test {
 .full-spread .copy p {
   font-size: 1.2rem;
   line-height: 1.6rem;
-  margin-bottom: 0;
+  margin-bottom: 45px;
   letter-spacing: 0.01rem
 }
 
 @media (min-width: 600px) {
   .full-spread .copy p {
+    font-size: 4.2rem;
+    line-height: 2.6rem
+  }
+}
+@media (min-width: 600px) {
+  .full-spread .copy .wrap  p {
     font-size: 1.8rem;
     line-height: 2.6rem
   }
 }
+@media (min-width: 600px) {
+  .full-spread .copy .contact  p {
+    font-size: 1.8rem;
+    line-height: 2.6rem
+  }
+}
+@media (min-width: 600px) {
+  div.contact{
+    width:30%;
+    padding:5px;
+    margin:11px;;
+    position: absolute;
+    top: 309px;
+    left:75px;
+    right:300px;
+    bottom:100px;
+    
+  }
+}
+@media (min-width: 880px) {
+  div.contact{
+    width:30%;
+    padding:5px;
+    margin:11px;;
+    position: absolute;
+    top: 200px;
+    left:50px;
+    right:300px;
+    bottom:100px;
+    
+  }
+
+@media (min-width: 600px) {
+  div.datevenue{
+    width:30%;
+    padding:5px;
+margin:11px;;
+    position:absolute;
+    top:322px;
+    left:448px;
+    right:75px;
+    bottom:100px;
+    
+    
+  }
+}
+@media (min-width: 600px) {
+  .full-spread .copy .datevenue  p {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  }
+}
+
 
 @media (min-width: 880px) {
   .full-spread .copy p {
-    font-size: 2.2rem;
+    font-size: 4.8rem;
     line-height: 3rem;
     letter-spacing: 0.02rem
   }
 }
+@media (min-width: 880px) {
+  .full-spread .copy .wrap p {
+    font-size: 2.0rem;
+    line-height: 3rem;
+    letter-spacing: 0.02rem
+  }
+}
+@media (min-width: 880px) {
+  .full-spread .copy .contact p {
+    font-size: 2.0rem;
+    line-height: 3rem;
+    letter-spacing: 0.02rem
+    
+  }
+}
+@media (min-width: 880px) {
+  .full-spread .copy .datevenue p {
+    font-size: 2.0rem;
+    line-height: 3rem;
+    letter-spacing: 0.02rem
+    
+  }
+}
+
+@media (min-width: 880px) {
+  div.datevenue{
+    width:30%;
+    padding:5px;
+    margin:11px;;
+    position: absolute;
+    top: 200px;
+    left:600px;
+    right:75px;
+    bottom:100px;
+    
+  }
+}
+
+
 
 @media (min-width: 1500px) {
   .full-spread .copy p {
