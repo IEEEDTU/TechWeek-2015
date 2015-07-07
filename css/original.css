@@ -6892,6 +6892,9 @@ margin:11px ;
   margin-top: 6rem;
   font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif
 }
+.data-yir-link:nth-of-type(2) {
+	margin-top: 1rem;
+}
 
 .full-viewport-hero {
   height: 100%
