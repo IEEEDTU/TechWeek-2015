@@ -227,9 +227,10 @@ span.cNum {
 }
 .contact, .datevenue {
     font-family: 'Roboto Slab';
-    border: 2px solid orange;
+    box-shadow: 0 0 2px 2px black;
+    background-color: hsla(0,00%,70%,0.3);
     height: 30%;
-    position: relative
+    position: relative; 
 }
 .contact div:before {
     content: "WHO";
