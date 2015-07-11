@@ -220,37 +220,38 @@ section:nth-of-type(1) {
   width: 80%
 }
 span.cName {
-    float: left
+    float: left;
 }
 span.cNum {
     float: right
 }
 .contact, .datevenue {
     font-family: 'Roboto Slab';
-    box-shadow: 0 0 2px 2px black;
+    box-shadow: 0 0 2px 2px hsl(0,0%,20%);
     background-color: hsla(0,00%,70%,0.3);
     height: 30%;
     position: relative; 
 }
 .contact div:before {
     content: "WHO";
-    text-align: center;
     font-size: 1.2em;
-    color: purple;
+    color: white;
     position: absolute;
-    top: -1.2em;
     left: 0;
-    right: 0
+    top: 0;
+    bottom: 0;
+    transform: rotate(-90deg)
 }
 .datevenue div:before {
     content: "WHERE";
-    text-align: center;
     font-size: 1.2em;
-    color: purple;
+    color: white;
     position: absolute;
-    top: -1.2em;
-    left: 0;
-    right: 0
+    top: 0;
+    bottom: 0;
+    right: 0;
+    transform: rotate(90deg);
+    line-height: 0.2em;
 }
 .contact p, .datevenue p{
     margin-bottom: 4px !important;
@@ -272,17 +273,18 @@ div.wrap {
 div.wrap p {
     line-height: inherit !important;
     font-size: 1em !important;
-    border: 2px solid orange;
     padding: 1em;
+    box-shadow: 0 0 2px 2px hsl(0,0%,20%);
+    background-color: hsla(0,0%,70%,0.3);
 }
 .eventDesc:before {
     content: "WHAT";
     text-align: center;
-    font-size: 1.2em;
-    color: purple;
-    margin: auto;
+    font-size: 1.6em;
+  font-family: 'Roboto Slab';
+    color: white;
     position: absolute;
     left: 0;
     right: 0;
-    top: -1.2em;
+    top: -1.3em;
 }
