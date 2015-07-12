@@ -399,6 +399,8 @@ h2 {
 		border: solid 3px white;
 	}
 }
+li{
+	display: inline-block;}
 .moments .box2{
 	margin: 20px auto;
 	margin-right: 25px;
