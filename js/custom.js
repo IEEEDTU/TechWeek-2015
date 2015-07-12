@@ -17,6 +17,7 @@ function getVisibleChapter () {
 	for ( i = 0; i<sections.length; i++) {
 		if($($(sections[i])).css("display") === "block") break;
 	}//got chapter number here
+	i = parseInt(i);
 	return i;
 }
 
@@ -34,8 +35,8 @@ $(window).load(function () {
 		
 		var frwd = $(this).hasClass("trigger-forward");//true for forward
 		var visibleChapter = getVisibleChapter();//current chapter visible
-		var nextChapter = parseInt(visibleChapter + 1);
-		var prevChapter = parseInt(visibleChapter - 1);
+		var nextChapter = visibleChapter + 1;
+		var prevChapter = visibleChapter - 1;
 
 		if(frwd) {
 			$("button.trigger-backward").show();
@@ -49,5 +50,13 @@ $(window).load(function () {
 			$($(sections[visibleChapter])).fadeOut();
 			if(prevChapter === 0) $("button.trigger-backward").hide();
 		}
+	});
+	
+	//Explore button
+	$("a.js-trigger-forward").click(function(e) {
+		e.preventDefault();
+		$("button.trigger-backward").show();
+			$($(sections[getVisibleChapter() + 1])).fadeIn();
+			$($(sections[getVisibleChapter()])).fadeOut();
 	});
 });
