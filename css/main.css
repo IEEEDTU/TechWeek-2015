@@ -399,6 +399,36 @@ h2 {
 		border: solid 3px white;
 	}
 }
+.moments .box2{
+	margin: 20px auto;
+	margin-right: 25px;
+	 width: 180px;
+    	min-height: 220px;
+    	padding: 10px;
+    	position:relative;
+    
+	background: #ffffff;
+	border: 0px solid #ccc;
+    	border-top: 1px solid #ccc;
+    
+    
+    	-webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+	
+	display:inline-block;
+	transform: scale(1.25);
+}
+.moments img{
+	width: 170px;
+	height: 160px;
+	margin-top:5px;
+	position:relative;
+	margin-bottom: 0px;
+}
+.moments h1{
+	size:5px;
+	margin:auto;
+}
 
 .moments-index {
 	font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
