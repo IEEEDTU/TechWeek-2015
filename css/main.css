@@ -424,16 +424,18 @@ li{
 
 }
 .moments-index-list  h1{
+	
 	font-size:0.8em;
 	color:#000000;
 }
 .moments-index-list  h2{
+	
 	font-size:0.65em;
 	color:#000000;
 }
 
 .moments-index {
-	font-family: "Helvetica Neue", Helvetica, Arial, "Liberation Sans", FreeSans, sans-serif;
+	font-family: 'Germania One';
 	z-index: 2100;
 	position: absolute;
 	background: #00a0ff;
@@ -519,6 +521,7 @@ li{
 }
 
 .moments-index-title {
+	font-family: 'Passero One' !important;
 	font-size: 1.4rem;
 	font-weight: bold;
 	-webkit-transition: all 0.3s ease-out;
@@ -977,7 +980,8 @@ span.cNum {
 
 .contact,
 .datevenue {
-	
+	font-family: 'Germania One';
+	font-weight: 400;
 	box-shadow: 0 0 2px 2px hsl(0, 0%, 20%);
 	background-color: hsla(0, 00%, 70%, 0.3);
 	height: 30%;
@@ -986,6 +990,7 @@ span.cNum {
 
 .contact div:before {
 	content: "WHO";
+	font-family: 'Passero One' !important;
 	font-size: 1.2em;
 	color: white;
 	position: absolute;
@@ -997,6 +1002,7 @@ span.cNum {
 
 .datevenue div:before {
 	content: "WHERE";
+	font-family: 'Passero One' !important;
 	font-size: 1.2em;
 	color: white;
 	position: absolute;
@@ -1020,12 +1026,11 @@ span.cNum {
 }
 
 div.title {
-	
+	font-family: 'Lilita One';
 	text-decoration: underline;
 }
 
 div.wrap {
-	font-family: 'Raleway';
 	position: relative;
 }
 
@@ -1040,6 +1045,7 @@ div.wrap p {
 .eventDesc:before {
 	content: "WHAT";
 	text-align: center;
+	font-family: 'Passero One' !important;
 	font-size: 1.6em;
 	color: white;
 	position: absolute;
@@ -1048,7 +1054,19 @@ div.wrap p {
 	top: -1.3em;
 }
 
+.eventDesc {
+	font-family: 'Raleway';
+	font-weight: 400
+}
+
 li.project a, .germaniaFont {
-	font-family: 'Germania One' !important;
+	font-family: 'Germania One', cursive !important;
 	font-weight: 400;
+	font-size: 1.2em
+}
+
+.intro_01 .wrap, .intro_02 .wrap, .intro_03 .wrap, .intro_04 .wrap {
+	font-family: 'IM Fell DW Pica SC', serif !important;
+	font-weight: 400;
+	font-size: 2em;
 }
