@@ -401,35 +401,39 @@ h2 {
 }
 li{
 	display: inline-block;}
-.moments .box2{
-	margin: 20px auto;
-	margin-right: 25px;
-	 width: 180px;
-    	min-height: 220px;
-    	padding: 10px;
+.moments-index-list	.box2{
+	margin:  0em  0em;
+	margin-left: 0em;
+	margin-right: 0.8em;
+	 width: 6.95em;
+    height: 8.75em;
+    	padding:  0.5em;
     	position:relative;
     
 	background: #ffffff;
 	border: 0px solid #ccc;
-    	border-top: 1px solid #ccc;
+    	border-top: 0.0625em solid #ccc;
     
     
-    	-webkit-box-shadow: -1px 2px 2px rgba(0, 0, 0, 0.2);
-	box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    	-webkit-box-shadow: -0.0625em 0.125em 0.125em rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.1875em 0.375em rgba(0,0,0,.25);
 	
 	display:inline-block;
 	transform: scale(1.25);
 }
-.moments img{
-	width: 170px;
-	height: 160px;
-	margin-top:5px;
+.moments-index-list img{
+	width: 5.85em;
+	height:  5em;
 	position:relative;
-	margin-bottom: 0px;
+
 }
-.moments h1{
-	size:5px;
-	margin:auto;
+.moments-index-list  h1{
+	font-size:0.8em;
+	color:#000000;
+}
+.moments-index-list  h2{
+	font-size:0.65em;
+	color:#000000;
 }
 
 .moments-index {
@@ -511,7 +515,7 @@ li{
 
 @media (min-width: 700px) {
 	.moments-index-list {
-		padding-left: 24rem;
+		padding-left: 12rem;
 		padding-top: 4.6rem;
 		padding-bottom: 1rem;
 		float: left;
