@@ -773,11 +773,20 @@ li{
 	margin-bottom: 45px;
 	letter-spacing: 0.01rem;
 }
-
+.full-spread .copy .eventDesc {
+	margin-bottom: 1em;
+}
+.event p {
+	font-size: 3rem !important;
+}
 @media (min-width: 600px) {
-	.full-spread .copy p {
+	.full-spread .copy p, .event p
+	{
 		font-size: 4.2rem;
 		line-height: 2.6rem;
+	}
+	.full-spread .copy .eventDesc {
+	margin-bottom: 45px;
 	}
 }
 
@@ -790,7 +799,7 @@ li{
 
 @media (min-width: 600px) {
 	.full-spread .copy .contact p {
-		font-size: 1.8rem;
+		font-size: 1.5rem;
 		line-height: 2.6rem;
 	}
 }
@@ -801,7 +810,6 @@ li{
 		padding: 0.25em;
 		margin: 2% auto;
 		float: left;
-		font-size: 1.5em;
 	}
 }
 
@@ -817,13 +825,13 @@ li{
 
 @media (min-width: 600px) {
 	.full-spread .copy .datevenue p {
-		font-size: 1.8rem;
-		line-height: 2.6rem;
+		font-size: 1.2rem;
+		line-height: 2.0rem;
 	}
 }
 
 @media (min-width: 880px) {
-	.full-spread .copy p {
+	.full-spread .copy p, .event p {
 		font-size: 4.8rem;
 		line-height: 4rem;
 		letter-spacing: 0.02rem;
@@ -840,7 +848,7 @@ li{
 
 @media (min-width: 880px) {
 	.full-spread .copy .contact p {
-		font-size: 2.0rem;
+		font-size: 1.8rem;
 		line-height: 3rem;
 		letter-spacing: 0.02rem;
 	}
@@ -966,10 +974,20 @@ section:nth-of-type(1) {
 	.event_06 .copy .wrap,
 	.event_07 .copy .wrap,
 	.event_08 .copy .wrap {
-		width: 75%;
+		width: 75% !important;
 	}
 }
-
+.event_00 .copy .wrap,
+	.event_01 .copy .wrap,
+	.event_02 .copy .wrap,
+	.event_03 .copy .wrap,
+	.event_04 .copy .wrap,
+	.event_05 .copy .wrap,
+	.event_06 .copy .wrap,
+	.event_07 .copy .wrap,
+	.event_08 .copy .wrap {
+		width: 100%;
+	}
 span.cName {
 	float: left;
 }
@@ -984,8 +1002,22 @@ span.cNum {
 	font-weight: 400;
 	box-shadow: 0 0 2px 2px hsl(0, 0%, 20%);
 	background-color: hsla(0, 00%, 70%, 0.3);
-	height: 30%;
+	height: 15%;
 	position: relative;
+	margin: 1em auto;
+}
+@media (min-width:600px) {
+	.contact,
+	.datevenue {
+		height: 25%;
+	}	
+	.contact div:before {
+	font-size: 1.7em !important;
+	width: 5rem !important;
+}
+	.datevenue div:before {
+		width: 5rem !important;
+	}
 }
 
 .contact div:before {
@@ -993,11 +1025,13 @@ span.cNum {
 	font-family: 'Passero One' !important;
 	font-size: 1.2em;
 	color: white;
+	width: 3rem;
 	position: absolute;
-	left: 0;
 	top: 0;
 	bottom: 0;
+	left: 0;
 	transform: rotate(-90deg);
+	line-height: 0;
 }
 
 .datevenue div:before {
@@ -1005,12 +1039,13 @@ span.cNum {
 	font-family: 'Passero One' !important;
 	font-size: 1.2em;
 	color: white;
+	width: 3rem;
 	position: absolute;
 	top: 0;
 	bottom: 0;
 	right: 0;
 	transform: rotate(90deg);
-	line-height: 0.2em;
+	line-height: 0;
 }
 
 .contact p,
@@ -1046,17 +1081,17 @@ div.wrap p {
 	content: "WHAT";
 	text-align: center;
 	font-family: 'Passero One' !important;
-	font-size: 1.6em;
+	font-size: 1.7em;
 	color: white;
 	position: absolute;
 	left: 0;
 	right: 0;
-	top: -1.3em;
+	top: -1.2em;
 }
 
 .eventDesc {
 	font-family: 'Raleway';
-	font-weight: 400
+	font-weight: 400;
 }
 
 li.project a, .germaniaFont {
