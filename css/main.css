@@ -362,7 +362,6 @@ h2 {
 	font-family: Helvetica;
 	font-size: 0.9rem;
 	position: fixed;
-	top: 1rem;
 	z-index: 2100;
 	text-decoration: none;
 	cursor: pointer;
@@ -370,6 +369,7 @@ h2 {
 	border: none;
 	outline: none;
 	padding: 0;
+	top: 1rem;
 }
 
 .view-all:hover {
@@ -388,50 +388,49 @@ h2 {
 		bottom: 2rem;
 		left: 2rem;
 		border: solid 3px rgba(255, 255, 255, 0.3);
-		padding: 8px 10px;
+		padding: 0.1em 0.5em;
 		height: 41px;
 	}
 	.view-all:hover {
 		border: solid 3px white;
 	}
 }
-li{
-	display: inline-block;}
-.moments-index-list	.box2{
-	margin:  0em  0em;
+
+li {
+	display: inline-block;
+}
+
+.moments-index-list .box2 {
+	margin: 0em 0em;
 	margin-left: 0em;
 	margin-right: 0.5em;
-	 width: 6.55em;
-    height: 8.75em;
-    	padding:  0.5em;
-    	position:relative;
-    
+	width: 6.55em;
+	height: 8.75em;
+	padding: 0.5em;
+	position: relative;
 	background: #ffffff;
 	border: 0px solid #ccc;
-    	border-top: 0.0625em solid #ccc;
-    
-    
-    	-webkit-box-shadow: -0.0625em 0.125em 0.125em rgba(0, 0, 0, 0.2);
-	box-shadow: 0 0.1875em 0.375em rgba(0,0,0,.25);
-	
-	display:inline-block;
+	border-top: 0.0625em solid #ccc;
+	-webkit-box-shadow: -0.0625em 0.125em 0.125em rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0.1875em 0.375em rgba(0, 0, 0, .25);
+	display: inline-block;
 	transform: scale(1.25);
 }
-.moments-index-list img{
-	width: 5.55em;
-	height:  5em;
-	position:relative;
 
+.moments-index-list img {
+	width: 5.55em;
+	height: 5em;
+	position: relative;
 }
-.moments-index-list  h1{
-	
-	font-size:0.8em;
-	color:#000000;
+
+.moments-index-list h1 {
+	font-size: 0.8em;
+	color: #000000;
 }
-.moments-index-list  h2{
-	
-	font-size:0.65em;
-	color:#000000;
+
+.moments-index-list h2 {
+	font-size: 0.65em;
+	color: #000000;
 }
 
 .moments-index {
@@ -694,6 +693,7 @@ li{
 	font-style: normal;
 	color: #fff;
 	display: none;
+	overflow: hidden;
 }
 
 .asset {
@@ -755,6 +755,12 @@ li{
 	width: 70%;
 }
 
+@media (max-width: 600px) {
+	.full-spread .copy {
+		height: 95%
+	}
+}
+
 @media (min-width: 850px) {
 	.full-spread .copy .wrap {
 		width: 45%;
@@ -773,20 +779,23 @@ li{
 	margin-bottom: 45px;
 	letter-spacing: 0.01rem;
 }
+
 .full-spread .copy .eventDesc {
 	margin-bottom: 1em;
 }
+
 .event p {
 	font-size: 3rem !important;
 }
+
 @media (min-width: 600px) {
-	.full-spread .copy p, .event p
-	{
+	.full-spread .copy p,
+	.event p {
 		font-size: 4.2rem;
 		line-height: 2.6rem;
 	}
 	.full-spread .copy .eventDesc {
-	margin-bottom: 45px;
+		margin-bottom: 45px;
 	}
 }
 
@@ -831,7 +840,8 @@ li{
 }
 
 @media (min-width: 880px) {
-	.full-spread .copy p, .event p {
+	.full-spread .copy p,
+	.event p {
 		font-size: 4.8rem;
 		line-height: 4rem;
 		letter-spacing: 0.02rem;
@@ -977,17 +987,19 @@ section:nth-of-type(1) {
 		width: 75% !important;
 	}
 }
+
 .event_00 .copy .wrap,
-	.event_01 .copy .wrap,
-	.event_02 .copy .wrap,
-	.event_03 .copy .wrap,
-	.event_04 .copy .wrap,
-	.event_05 .copy .wrap,
-	.event_06 .copy .wrap,
-	.event_07 .copy .wrap,
-	.event_08 .copy .wrap {
-		width: 100%;
-	}
+.event_01 .copy .wrap,
+.event_02 .copy .wrap,
+.event_03 .copy .wrap,
+.event_04 .copy .wrap,
+.event_05 .copy .wrap,
+.event_06 .copy .wrap,
+.event_07 .copy .wrap,
+.event_08 .copy .wrap {
+	width: 100%;
+}
+
 span.cName {
 	float: left;
 }
@@ -998,6 +1010,7 @@ span.cNum {
 
 .contact,
 .datevenue {
+	padding: 4px;
 	font-family: 'Germania One';
 	font-weight: 400;
 	box-shadow: 0 0 2px 2px hsl(0, 0%, 20%);
@@ -1006,15 +1019,16 @@ span.cNum {
 	position: relative;
 	margin: 1em auto;
 }
-@media (min-width:600px) {
+
+@media (min-width: 600px) {
 	.contact,
 	.datevenue {
 		height: 25%;
-	}	
+	}
 	.contact div:before {
-	font-size: 1.7em !important;
-	width: 5rem !important;
-}
+		font-size: 1.7em !important;
+		width: 5rem !important;
+	}
 	.datevenue div:before {
 		width: 5rem !important;
 	}
@@ -1094,14 +1108,41 @@ div.wrap p {
 	font-weight: 400;
 }
 
-li.project a, .germaniaFont {
+@media (max-width: 600px) {
+	.eventDesc {
+		padding: 0.5em !important;
+		text-align: justify
+	}
+}
+
+li.project a,
+.germaniaFont {
 	font-family: 'Germania One', cursive !important;
 	font-weight: 400;
 	font-size: 1.2em
 }
 
-.intro_01 .wrap, .intro_02 .wrap, .intro_03 .wrap, .intro_04 .wrap {
+.intro_01 .wrap,
+.intro_02 .wrap,
+.intro_03 .wrap,
+.intro_04 .wrap {
 	font-family: 'IM Fell DW Pica SC', serif !important;
 	font-weight: 400;
 	font-size: 2em;
+}
+
+@media (max-width: 600px) {
+	.intro_01 .wrap,
+	.intro_02 .wrap,
+	.intro_03 .wrap,
+	.intro_04 .wrap {
+		font-size: 1.2em;
+		overflow: auto
+	}
+}
+
+@media (max-width: 600px) {
+	.yir-intro-slide {
+		margin-top: 20%
+	}
 }
