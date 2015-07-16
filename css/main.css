@@ -380,16 +380,10 @@ h2 {
 		right: 1rem;
 		background-image: url(imgs/ksr-logo.svg);
 		background-repeat: no-repeat;
-		background-position:center;
-		
-		
+		background-position:center;	
 	}
-}
-@media (max-width: 700px) {
 	.view-all  p{
-		
 		visibility: hidden;
-		
 	}
 }
 
@@ -402,6 +396,9 @@ h2 {
 		padding: 0.1em 0.5em;
 		height: 41px;
 		background-color: transparent;
+	}
+	.view-all  p{
+		margin-bottom: 0
 	}
 	.view-all:hover {
 		border: solid 3px white;
