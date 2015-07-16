@@ -365,7 +365,6 @@ h2 {
 	z-index: 2100;
 	text-decoration: none;
 	cursor: pointer;
-	background-color: transparent;
 	border: none;
 	outline: none;
 	padding: 0;
@@ -377,8 +376,20 @@ h2 {
 }
 
 @media (max-width: 700px) {
-	.view-all {
+	.view-all  {
 		right: 1rem;
+		background-image: url(imgs/ksr-logo.svg);
+		background-repeat: no-repeat;
+		background-position:center;
+		
+		
+	}
+}
+@media (max-width: 700px) {
+	.view-all  p{
+		
+		visibility: hidden;
+		
 	}
 }
 
@@ -390,6 +401,7 @@ h2 {
 		border: solid 3px rgba(255, 255, 255, 0.3);
 		padding: 0.1em 0.5em;
 		height: 41px;
+		background-color: transparent;
 	}
 	.view-all:hover {
 		border: solid 3px white;
