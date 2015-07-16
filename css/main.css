@@ -1157,3 +1157,16 @@ li.project a,
 		margin-top: 20%
 	}
 }
+
+ .browsecode,
+.credits,
+.contactus{
+	font-family: 'Roboto Slab';
+	font-size:0.5em;
+	box-shadow: 0 0 2px 2px hsl(0, 0%, 20%);
+	background-color: hsla(0, 00%, 70%, 0.3);
+	height: 40%;
+	width: 25%;
+	position: relative;
+
+}
