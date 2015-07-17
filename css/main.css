@@ -1136,7 +1136,10 @@ li.project a,
 .intro_01 .wrap,
 .intro_02 .wrap,
 .intro_03 .wrap,
-.intro_04 .wrap {
+.intro_04 .wrap,
+.outro_00 .wrap,
+.outro_01 .wrap,
+.outro_02 .wrap {
 	font-family: 'IM Fell DW Pica SC', serif !important;
 	font-weight: 400;
 	font-size: 2em;
@@ -1146,7 +1149,10 @@ li.project a,
 	.intro_01 .wrap,
 	.intro_02 .wrap,
 	.intro_03 .wrap,
-	.intro_04 .wrap {
+	.intro_04 .wrap,
+	.outro_00 .wrap,
+	.outro_01 .wrap,
+	.outro_02 .wrap {
 		font-size: 1.2em;
 		overflow: auto
 	}
@@ -1169,4 +1175,10 @@ li.project a,
 	width: 25%;
 	position: relative;
 
+}
+
+@media (max-width: 600px) {
+	.social {
+		visibility:hidden;
+	}
 }
