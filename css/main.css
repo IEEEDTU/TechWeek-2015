@@ -489,10 +489,12 @@ li {
 
 .moments-index-list {
 	list-style-type: none;
+	text-align: center;
 }
 
 .moments-index-list li {
-	margin-bottom: 1rem
+	margin: 1rem auto;
+	
 }
 
 .moments-index-list li a.active {
@@ -523,9 +525,7 @@ li {
 
 @media (max-width: 700px) {
 	.moments-index-list {
-		padding-left: 10rem;
-		padding-top: 3rem;
-		padding-bottom: 1rem;
+		padding: 3rem auto 1rem;
 		float: left;
 	}
 }
