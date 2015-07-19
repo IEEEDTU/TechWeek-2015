@@ -1,15 +1,13 @@
 /* jslint devel : true*/
 /* global $, document, window*/
-var i, j, sections = [], chapter = [], sectionsTitle = [];
+var i, j, sections = [];
 $(document).ready(function () {
 	'use strict';
 	//Fetch all sections and make queue
 	sections = $("section.moment");//Tags array
-	for ( i = 0 ; i < sections.length ; i++ ) {/*Why???Chapter[] is used nowhere*/
+	for ( i = 0 ; i < sections.length ; i++ )
 		j = sections[i];
-		chapter[i] = parseInt($(j).data("chapter").substr(6,8));//Chapter numbers array
-	}
-	return chapter, sections;
+	return sections;
 });
 
 // Fetch visible chapter
@@ -70,10 +68,11 @@ $(window).load(function () {
 		$($(sections[nextChapter])).fadeIn();
 	});
 	
-	var url = window.location.href;
 	//Event linking from url.
+	var url = window.location.href;
 	if(url.search("#event_") != -1) {
-		var nextChapter = parseInt(url.split("#event_").pop());//Gets the part of url after #event_ as integer.
+		//Gets the part of url after #event_ as integer.
+		var nextChapter = parseInt(url.substr(url.lastIndexOf("_")+1,2));
 		if (nextChapter >= 1 && nextChapter <= 9) {
 			nextChapter += 4;
 			var visibleChapter = getVisibleChapter();//current chapter visible
