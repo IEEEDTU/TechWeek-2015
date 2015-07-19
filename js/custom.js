@@ -5,7 +5,7 @@ $(document).ready(function () {
 	'use strict';
 	//Fetch all sections and make queue
 	sections = $("section.moment");//Tags array
-	for ( i = 0 ; i < sections.length ; i++ ) {
+	for ( i = 0 ; i < sections.length ; i++ ) {/*Why???Chapter[] is used nowhere*/
 		j = sections[i];
 		chapter[i] = parseInt($(j).data("chapter").substr(6,8));//Chapter numbers array
 	}
@@ -56,7 +56,30 @@ $(window).load(function () {
 	$("a.js-trigger-forward").click(function(e) {
 		e.preventDefault();
 		$("button.trigger-backward").show();
-			$($(sections[getVisibleChapter() + 1])).fadeIn();
-			$($(sections[getVisibleChapter()])).fadeOut();
+		$($(sections[getVisibleChapter() + 1])).fadeIn();
+		$($(sections[getVisibleChapter()])).fadeOut();
 	});
+	
+	//Event linnking from schedule page
+	$("li.moments").click(function() {
+		var nextChapter = parseInt($(this).data("moment").substr(6,8)) + 5;
+		var visibleChapter = getVisibleChapter();//current chapter visible
+		$("div.moments-index").toggleClass("show");
+		$($(sections[visibleChapter])).fadeOut();
+		$("button.trigger-backward").show();
+		$($(sections[nextChapter])).fadeIn();
+	});
+	
+	var url = window.location.href;
+	//Event linking from url.
+	if(url.search("#event_") != -1) {
+		var nextChapter = parseInt(url.split("#event_").pop());//Gets the part of url after #event_ as integer.
+		if (nextChapter >= 1 && nextChapter <= 9) {
+			nextChapter += 4;
+			var visibleChapter = getVisibleChapter();//current chapter visible
+			$($(sections[visibleChapter])).fadeOut();
+			$("button.trigger-backward").show();
+			$($(sections[nextChapter])).fadeIn();
+		}
+	}
 });
