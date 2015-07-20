@@ -79,7 +79,7 @@ $(window).load(function () {
 			    { "linkfrom" : "animation", "linkto" : 10 },
 			    { "linkfrom" : "wattack", "linkto" : 11 },
 		 	    { "linkfrom" : "designing", "linkto" : 12 },
-			    { "linkfrom" : "matlab", "linkto" : 13 },
+			    { "linkfrom" : "dip", "linkto" : 13 },
 		  ] 
 	}  
 	//Event linking from url.
