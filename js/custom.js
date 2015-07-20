@@ -71,15 +71,36 @@ $(window).load(function () {
 	});
 	
 	var url = window.location.href;
+	var obj = {
+		 "urls" : [ 
+		 		{ "linkfrom" : "programming", "linkto" : 5 },//Chapter Numbers
+			    { "linkfrom" : "robotics", "linkto" : 6 },
+			    { "linkfrom" : "oss", "linkto" : 7 },
+		 	    { "linkfrom" : "webd", "linkto" : 8 },
+				{ "linkfrom" : "solidworks", "linkto" : 9 },
+			    { "linkfrom" : "animation", "linkto" : 10 },
+			    { "linkfrom" : "wattack", "linkto" : 11 },
+		 	    { "linkfrom" : "designing", "linkto" : 12 },
+			    { "linkfrom" : "matlab", "linkto" : 13 },
+		  ] 
+	}  
 	//Event linking from url.
-	if(url.search("#event_") != -1) {
-		var nextChapter = parseInt(url.split("#event_").pop());//Gets the part of url after #event_ as integer.
-		if (nextChapter >= 1 && nextChapter <= 9) {
-			nextChapter += 4;
-			var visibleChapter = getVisibleChapter();//current chapter visible
+	if(url.search("#") != -1) {
+		var eventurl = url.split("#").pop(); // Gets the part of url after #.
+		var flag = false; //To check if eventurl is among the events.
+		for(var i = 0; i < 9; i++) {
+			if(obj.urls[i].linkfrom == eventurl) {
+				flag = true; //event found.
+				break;
+			}
+		} 
+		if (flag == true) {
+			var nextChapter = obj.urls[i].linkto; //Get desired chapter number.
+			var visibleChapter = getVisibleChapter();
 			$($(sections[visibleChapter])).fadeOut();
 			$("button.trigger-backward").show();
 			$($(sections[nextChapter])).fadeIn();
 		}
 	}
+	
 });
