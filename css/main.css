@@ -1186,3 +1186,74 @@ li.project a,
 .moments {
 	cursor: pointer
 }
+
+.row {
+	position: relative;
+	width: 80%;
+	height: 100px;
+	margin: 1em auto;
+	text-align: center;
+}
+.row:nth-of-type(1) {
+	height:auto;
+	margin: 0 auto;
+}
+.row p {
+	font-size: 2em !important;
+	font-family: 'New Rocker'
+}
+.linkCircle {
+	display: inline-block;
+	width: 90px;
+	height: 90px;
+	background: hsla(170, 100%, 50%, 1);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 50%;
+	text-align: center;
+	margin: 5px 20px;
+	padding: 0.8rem;
+}
+
+@media (max-width:600px) {
+	.row {
+		height: 60px;
+	}
+	.linkCircle {
+		width: 50px;
+		height: 50px;
+		margin: 5px;
+	}
+}
+
+#r1c1 {
+	background-image: url(imgs/final_page_logos/like.svg);
+}
+
+#r2c1 {
+	background-image: url(imgs/final_page_logos/tweet.svg);
+}
+
+#r2c2 {
+	background-image: url(imgs/final_page_logos/googleplus.svg);
+}
+
+#r3c1 {
+	background-image: url(imgs/final_page_logos/git.svg)
+}
+
+#r3c2 {
+	background-image: url(imgs/final_page_logos/credits.svg)
+}
+
+#r3c3 {
+	background-image: url(imgs/final_page_logos/feedback.svg);
+	background-position: center 70%
+}
+
+.row a {
+	text-decoration: none;
+	color: inherit;
+	outline: none;
+}
