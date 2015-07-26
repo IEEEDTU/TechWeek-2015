@@ -1,211 +1,163 @@
 <html>
+
 <head>
-<style>
-*, *:before, *:after {
-  box-sizing: border-box;
-}
+	<style>
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
 
-html {
-  overflow-y: scroll;
-}
-
-body {
-  \\background: #000000;
-  font-family: 'Titillium Web', sans-serif;
-  \\background-image: url('15366-NQ350L.jpg');
-  \\background-image: url('blurred-background-15.jpg');
-  \\background-image: url('11.jpg');
-  \\background-image: url('16308-NQLOOE.jpg');
-  \\background-image: url('IMG-20150711-WA0005.jpg');
-  background-size:100% 100%;
-  background-opacity:0.6;
-  background-image: url('15365-NQ34Y9.jpg');
-  
-}
-
-
-.form {
-  background: transparent;
-  padding: 40px;
-  max-width:1050px;
-  margin: 40px auto;
-  \\border-radius: 4px;
-  \\box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-  opacity: 0.6;
- 
-}
-
-
-
-.tab-group {
-	margin: 10px 0px 0px 280px;
-  padding: 10px;
-  color:  #ffffff;
-  font-size: 30px;
-  align:center;
-  width: 400px;;
-  text-align: center;
-  outline: 1px solid #ffffff;
-  
-}
-
-
-
-
-::-webkit-input-placeholder {
-color: 	#C0C0C0;
-font-family:Comic Sans MS;}
-
-
-input, textarea {
-  font-size: 22px;
-  display: block;
-  width: 40%;
-  height: 100%;
-  padding: 5px 10px;
-  background: none;
-  background-image: none;
-  border: 1px solid #a0b3b0;
-  
-  text-color: #000000;
-  border-radius: 0;
-  -webkit-transition: border-color .25s ease, box-shadow .25s ease;
-          transition: border-color .25s ease, box-shadow .25s ease;
-		  background:#ffffff;
-}
-input:focus, textarea:focus {
-  outline: 0;
-  border-color:#FF4500;
-}
-
-textarea {
-  border: 2px solid #a0b3b0;
-  resize: vertical;
-  background:#ffffff;}
-
-.field-wrap {
-  height:46px;
-  margin-bottom: 0px;
-  position: relative;
-
-}
-
-
-
-.button {
-  border: 0;
-  margin-top:25px;
-  outline: none;
-  border-radius: 5px;
-  font-size: 1.8rem;
-  font-weight: 600;
-  letter-spacing: .1em;
-  background: transparent;
-  text-decoration: none;
-  color: #ffffff;
-  -webkit-transition: all 0.5s ease;
-          transition: all 0.5s ease;
-  -webkit-appearance: none;
-	border:2px solid #D2691E ;
-	display:block;
-	padding: 10px;
-
-}
-.button:hover, .button:focus {
-  background: transparent;
-  cursor: pointer;
-  border:1px solid 	#8B0000;
-}
-
-.button-block{
-  display: block;
-  width:100%;
-}
-
-
-#bottom{
-	background:rgb(46, 46, 120);
-	padding:40px ;
-	padding-top: 20px;
-	width: 450px;
-	margin: -40px ;	
-	margin-top: 90px;
-}
-select{
-		margin-top: 70px;
-		margin-left: 290px;
-		color: 	#808080;
-		font-family:Comic Sans MS;
-		padding:8px;
-		border:solid 2px #a0b3b0;
-
-}
-select:hover{
-		border-color:#FF4500;
-}
-
-</style>
+		body {
+			font-family: 'Titillium Web', sans-serif;
+			background-size: 100% 100%;
+			background-opacity: 0.6;
+			background-image: url('15365-NQ34Y9.jpg');
+		}
+		
+		.form {
+			background: transparent;
+			padding: 40px;
+			max-width: 1050px;
+			margin: 40px auto;
+			opacity: 0.6;
+		}
+		
+		.tab-group {
+			margin: 10px 0px 0px 280px;
+			padding: 10px;
+			color: #ffffff;
+			font-size: 30px;
+			align: center;
+			width: 400px;
+			text-align: center;
+			outline: 1px solid #ffffff;
+		}
+		
+		input,
+		textarea {
+			font-size: 22px;
+			display: block;
+			width: 40%;
+			height: 100%;
+			padding: 5px 10px;
+			background: none;
+			background-image: none;
+			border: 1px solid #a0b3b0;
+			text-color: #000000;
+			border-radius: 0;
+			-webkit-transition: border-color .25s ease, box-shadow .25s ease;
+			transition: border-color .25s ease, box-shadow .25s ease;
+			background: #ffffff;
+		}
+		
+		input:focus,
+		textarea:focus {
+			border-color: #FF4500;
+		}
+		
+		.field-wrap {
+			height: 46px;
+			margin-bottom: 0px;
+			position: relative;
+		}
+		
+		.button {
+			border: 0;
+			margin-top: 25px;
+			outline: none;
+			border-radius: 5px;
+			font-size: 1.8rem;
+			font-weight: 600;
+			letter-spacing: .1em;
+			background: transparent;
+			text-decoration: none;
+			color: #ffffff;
+			-webkit-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+			-webkit-appearance: none;
+			border: 2px solid #D2691E;
+			display: block;
+			padding: 10px;
+		}
+		
+		.button:hover,
+		.button:focus {
+			background: transparent;
+			cursor: pointer;
+			border-color: white;
+		}
+		
+		.button-block {
+			display: block;
+			width: 100%;
+		}
+		
+		#bottom {
+			background: rgb(46, 46, 120);
+			padding: 40px;
+			padding-top: 20px;
+			width: 450px;
+			margin: -40px;
+			margin-top: 90px;
+		}
+		
+		select {
+			margin-top: 70px;
+			margin-left: 290px;
+			color: #808080;
+			padding: 8px;
+			border: solid 2px #a0b3b0;
+		}
+		
+		select:hover {
+			border-color: #FF4500;
+		}
+	</style>
 
 
 </head>
 
 <body>
-
-<div class="form">
-
-	<div class="tab-group">
-    Feedback Form
-    </div>
-
-  <br>
-  <br>
-
-  <div class="tab-content">
-    
-  
-
-      <form action="/" method="post">
-
-        
-          <center><div class="field-wrap">
-
-            <input style= "margin-bottom:0; margin-top:0px;"type="text" required autofocus autocomplete="off" placeholder="Name" />
-          </div></center>
-
-          
-			
-        <center><div class="field-wrap">
-
-          <input style="margin-bottom: 30px; margin-top:0px;" type="email" required autocomplete="off" placeholder="Email" />
-        </div></center>
-		<center><div class="field-wrap">
-
-          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 20px; wrap: virtual; height: 100px;"></textarea>
-        </div></center>
-		<div class="field-wrap">
-		<select>
-			<option value="1">Option 1</option>
-			<option value="2">Option 2</option>
-			<option value="3">Option 3</option>
-			<option value="4">Option 4</option>
-		</select>
+	<div class="form">
+		<div class="tab-group">
+			Feedback Form
 		</div>
-		<center><div id= "bottom">
-		<button type="submit" class="button button-block">Submit</button>
-		
-		
-		</div></center>
-
-		</form>
-		
-      
-
-   
-
-   
-
-  
- 
-<!-- /form -->
+		<br>
+		<br>
+		<div class="tab-content">
+			<form action="/" method="post">
+				<center>
+					<div class="field-wrap">
+						<input type="text" required autofocus autocomplete="off" placeholder="Name" />
+					</div>
+				</center>
+				<center>
+					<div class="field-wrap">
+						<input type="email" required autocomplete="off" placeholder="Email" />
+					</div>
+				</center>
+				<center>
+					<div class="field-wrap">
+						<textarea name="comment" placeholder="Your Comments.." cols="10"></textarea>
+					</div>
+				</center>
+				<div class="field-wrap">
+					<select>
+						<option value="1">Option 1</option>
+						<option value="2">Option 2</option>
+						<option value="3">Option 3</option>
+						<option value="4">Option 4</option>
+					</select>
+				</div>
+				<center>
+					<div id="bottom">
+						<button type="submit" class="button button-block">Submit</button>
+					</div>
+				</center>
+			</form>
+			</div>
+		</div>
 </body>
+
 </html>
