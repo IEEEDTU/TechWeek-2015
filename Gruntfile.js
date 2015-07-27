@@ -22,13 +22,21 @@ module.exports = function (grunt) {
           'prod/index.html': ['index.html']
         }
       }
-    }
+    },
+		copy: {
+			main: {
+				files: [
+					{expand:true, src: ['css/imgs/**/*'], dest:'prod/'}
+				]
+			}
+		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-processhtml');
 
-	grunt.registerTask('default', ['uglify', 'cssmin', 'processhtml']);
+	grunt.registerTask('default', ['uglify', 'cssmin', 'processhtml', 'copy']);
 
 };
