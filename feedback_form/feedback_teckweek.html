@@ -10,42 +10,38 @@ html {
 }
 
 body {
-  \\background: #000000;
+  
   font-family: 'Titillium Web', sans-serif;
-  \\background-image: url('15366-NQ350L.jpg');
-  \\background-image: url('blurred-background-15.jpg');
-  \\background-image: url('11.jpg');
-  \\background-image: url('16308-NQLOOE.jpg');
-  \\background-image: url('IMG-20150711-WA0005.jpg');
+ \\background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(0%,rgba(30,87,153,1)), color-stop(33%,rgba(21,82,153,1)), color-stop(58%,rgba(32,124,202,1)), color-stop(69%,rgba(41,137,216,1)), color-stop(69%,rgba(41,137,216,1)), color-stop(100%,rgba(125,185,232,1)));
   background-size:100% 100%;
   background-opacity:0.6;
-  background-image: url('15365-NQ34Y9.jpg');
-  
+  background: url('16308-NQLOOE.jpg');
+ 
 }
 
 
 .form {
-  background: transparent;
+  background:tranparent;
   padding: 40px;
   max-width:1050px;
-  margin: 40px auto;
+  margin: 0px auto;
   \\border-radius: 4px;
   \\box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
-  opacity: 0.6;
+  opacity: 0.7;
  
 }
 
 
 
 .tab-group {
-	margin: 10px 0px 0px 280px;
+	margin: 0px 0px 0px 280px;
   padding: 10px;
   color:  #ffffff;
   font-size: 30px;
   align:center;
   width: 400px;;
   text-align: center;
-  outline: 1px solid #ffffff;
+  outline: 2px solid #ffffff;
   
 }
 
@@ -60,13 +56,13 @@ font-family:Comic Sans MS;}
 input, textarea {
   font-size: 22px;
   display: block;
-  width: 40%;
+  width: 88%;
   height: 100%;
   padding: 5px 10px;
   background: none;
-  background-image: none;
-  border: 1px solid #a0b3b0;
-  
+  opacity:0.8;
+  border: 1px solid rgb(46, 46, 120);
+  font-family: Comic Sans MS;
   text-color: #000000;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
@@ -79,7 +75,7 @@ input:focus, textarea:focus {
 }
 
 textarea {
-  border: 2px solid #a0b3b0;
+  border: 2px solid rgb(46, 46, 120);
   resize: vertical;
   background:#ffffff;}
 
@@ -126,18 +122,26 @@ textarea {
 #bottom{
 	background:rgb(46, 46, 120);
 	padding:40px ;
-	padding-top: 20px;
+	padding-top: 10px;
 	width: 450px;
 	margin: -40px ;	
-	margin-top: 90px;
+	margin-top: 0px;
 }
+.outer{
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.45)), color-stop(100%,rgba(0,0,0,0)));
+	width: 450px;
+	height:350px;
+	margin-left:260px;
+	margin-bottom:0px;
+	padding-top:40px;}
 select{
 		margin-top: 70px;
-		margin-left: 290px;
+		margin-left: 28px;
 		color: 	#808080;
+		font-size:18px;
 		font-family:Comic Sans MS;
 		padding:8px;
-		border:solid 2px #a0b3b0;
+		border:solid 2px rgb(46, 46, 120);
 
 }
 select:hover{
@@ -154,19 +158,19 @@ select:hover{
 <div class="form">
 
 	<div class="tab-group">
-    Feedback Form
+    <b>Feedback Form</b>
     </div>
 
   <br>
   <br>
 
-  <div class="tab-content">
+  
     
   
 
       <form action="/" method="post">
 
-        
+			<div class="outer">
           <center><div class="field-wrap">
 
             <input style= "margin-bottom:0; margin-top:0px;"type="text" required autofocus autocomplete="off" placeholder="Name" />
@@ -190,7 +194,9 @@ select:hover{
 			<option value="4">Option 4</option>
 		</select>
 		</div>
+		</div>
 		<center><div id= "bottom">
+		<p style="text-align:center; color:#ffffff; font-size: 20px; font-family:Bradley Hand Itc; letter-spacing:0.5px;"><b>Thanks for filling in the form!</b></p>
 		<button type="submit" class="button button-block">Submit</button>
 		
 		
