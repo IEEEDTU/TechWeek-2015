@@ -59,7 +59,7 @@ input, textarea {
   padding: 5px 10px;
   background: none;
   opacity:0.8;
-  border: 1px solid rgb(46, 46, 120);
+  border: 2px solid rgb(46, 46, 120);
   font-family: Comic Sans MS;
   text-color: #000000;
   border-radius: 0;
@@ -93,10 +93,10 @@ textarea {
   border-radius: 5px;
   font-size: 1.8rem;
   font-weight: 600;
+  text-color:rgb(46, 46, 120);
   letter-spacing: .1em;
   background: transparent;
   text-decoration: none;
-  color: #ffffff;
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease;
   -webkit-appearance: none;
@@ -118,17 +118,18 @@ textarea {
 
 
 #bottom{
-	background:rgb(46, 46, 120);
+	\\background:rgb(46, 46, 120);
+	background: transparent;
 	padding:40px ;
 	padding-top: 10px;
 	width: 450px;
 	margin: -40px ;	
-	margin-top: 0px;
+	margin-top: 90px;
 }
 .outer{
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.45)), color-stop(100%,rgba(0,0,0,0)));
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.45)), color-stop(100%,rgba(0,0,0,0.03)));
 	width: 450px;
-	height:350px;
+	height:550px;
 	margin-left:260px;
 	margin-bottom:0px;
 	padding-top:40px;}
@@ -152,6 +153,8 @@ select:hover{
 </head>
 
 <body>
+<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
 <div class="form">
 
@@ -160,8 +163,7 @@ select:hover{
     </div>
 
   <br>
-  <br>
-
+  
   
     
   
@@ -171,18 +173,18 @@ select:hover{
 			<div class="outer">
           <center><div class="field-wrap">
 
-            <input style= "margin-bottom:0; margin-top:0px;"type="text" required autofocus autocomplete="off" placeholder="Name" />
+            <input style= "margin-bottom:5; margin-top:0px;"type="text" required autofocus autocomplete="off" placeholder="Name" />
           </div></center>
 
           
 			
         <center><div class="field-wrap">
 
-          <input style="margin-bottom: 30px; margin-top:0px;" type="email" required autocomplete="off" placeholder="Email" />
+          <input style="margin-top:5px;" type="email" required autocomplete="off" placeholder="Email" />
         </div></center>
 		<center><div class="field-wrap">
 
-          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 20px; wrap: virtual; height: 100px;"></textarea>
+          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 5px; wrap: virtual; height: 100px;"></textarea>
         </div></center>
 		<div class="field-wrap">
 		<select>
@@ -192,15 +194,16 @@ select:hover{
 			<option value="4">Option 4</option>
 		</select>
 		</div>
-		</div>
+		
 		<center><div id= "bottom">
-		<p style="text-align:center; color:#ffffff; font-size: 20px; font-family:Bradley Hand Itc; letter-spacing:0.5px;"><b>Thanks for filling in the form!</b></p>
+		<p style="text-align:center; color:#ffffff; font-size: 20px; font-family:Kaushan script; letter-spacing:0.5px;">Thanks for filling in the form!</p>
 		<button type="submit" class="button button-block">Submit</button>
 
 
 
 		</div>
 		</center>
+		</div>
 		</form>
 		</div>
 		
