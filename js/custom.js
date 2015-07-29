@@ -63,8 +63,13 @@ $(document).ready(function () {
 			var visibleChapter = getVisibleChapter();
 			$($(sections[visibleChapter])).fadeOut();
 			$("button.trigger-backward").show();
-			$($(sections[nextChapter])).fadeIn();
+			$($(sections[nextChapter])).fadeIn(function() {
+					updateMaxHeight(nextChapter-5)
+			});
 		}
+	}
+	else {
+		$("button.trigger-backward").hide();	
 	}
 	return sections;
 });
@@ -90,11 +95,20 @@ function updateHash(upcoming) {
 		history.pushState({}, " ", " ");
 }
 
+//Update event description box height
+function updateMaxHeight(i) {
+		if (document.body.getBoundingClientRect().width <=700) {
+	while (($(window).height() - ($($(".datevenue")[i]).offset().top + $($(".datevenue")[i]).height())) / $(window).height() > 0.12) {
+		console.log("running while");
+		if ($(".eventDesc")[i].scrollHeight < parseInt(($($(".eventDesc")[i]).css("maxHeight")).substr(0,3))) {
+				console.log("breaking");
+				break;
+		}
+		$($(".eventDesc")[i]).css("maxHeight", "+=1");
+	}
+		}
+}
 $(window).load(function () {
-	//Hide back btn on load
-	if (getVisibleChapter() == 0)
-		$("button.trigger-backward").hide();
-
 	//Toggle schedule visibility
 	$("button.view-all").click(function () {
 		$("div.moments-index").toggleClass("show");
@@ -113,12 +127,14 @@ $(window).load(function () {
 			$($(sections[nextChapter])).fadeIn();
 			$($(sections[visibleChapter])).fadeOut();
 			updateHash(nextChapter);
+			updateMaxHeight(nextChapter - 5);
 			if (nextChapter === (sections.length - 1)) $("button.trigger-forward").hide();
 		} else {
 			$("button.trigger-forward").show();
 			$($(sections[prevChapter])).fadeIn();
 			$($(sections[visibleChapter])).fadeOut();
 			updateHash(prevChapter);
+			updateMaxHeight(prevChapter - 5);
 			if (prevChapter === 0) $("button.trigger-backward").hide();
 		}
 	});
@@ -136,9 +152,17 @@ $(window).load(function () {
 		var nextChapter = parseInt($(this).data("moment").substr(6, 8)) + 5;
 		var visibleChapter = getVisibleChapter(); //current chapter visible
 		$("div.moments-index").toggleClass("show");
-		$($(sections[visibleChapter])).fadeOut();
 		$("button.trigger-backward").show();
-		$($(sections[nextChapter])).fadeIn();
-		updateHash(nextChapter);
+		$($(sections[visibleChapter])).fadeOut();
+		$($(sections[nextChapter])).fadeIn(function() {
+			updateHash(nextChapter);
+			updateMaxHeight(nextChapter - 5);	
+		});
 	});
+
 });
+
+$(window).resize(function() {
+		console.log("resized");
+		updateMaxHeight(getVisibleChapter()-5);
+})
