@@ -97,16 +97,18 @@ function updateHash(upcoming) {
 
 //Update event description box height
 function updateMaxHeight(i) {
-		if (document.body.getBoundingClientRect().width <=700) {
-	while (($(window).height() - ($($(".datevenue")[i]).offset().top + $($(".datevenue")[i]).height())) / $(window).height() > 0.12) {
-		console.log("running while");
-		if ($(".eventDesc")[i].scrollHeight < parseInt(($($(".eventDesc")[i]).css("maxHeight")).substr(0,3))) {
-				console.log("breaking");
-				break;
+	if (i >= 0 && i < 9) {
+		if (document.body.getBoundingClientRect().width <= 700) {
+			while (($(window).height() - ($($(".datevenue")[i]).offset().top + $($(".datevenue")[i]).height())) / $(window).height() > 0.12) {
+				console.log("running while");
+				if ($(".eventDesc")[i].scrollHeight < parseInt(($($(".eventDesc")[i]).css("maxHeight")).substr(0, 3))) {
+					console.log("breaking");
+					break;
+				}
+				$($(".eventDesc")[i]).css("maxHeight", "+=1");
+			}
 		}
-		$($(".eventDesc")[i]).css("maxHeight", "+=1");
 	}
-		}
 }
 $(window).load(function () {
 	//Toggle schedule visibility
