@@ -5,28 +5,28 @@ module.exports = function (grunt) {
 		uglify: {
 			dist: {
 				files: {
-					'prod/js/TechWeekScripts.js': ['js/custom.js']
+					'prod/TechWeek-2015/js/TechWeekScripts.js': ['js/custom.js']
 				}
 			}
 		},
 		cssmin: {
 			target: {
 				files: {
-					'prod/css/TechWeekStyles.css': ['css/main.css']
+					'prod/TechWeek-2015/css/TechWeekStyles.css': ['css/main.css']
 				}
 			}
 		},
     processhtml: {
       dist: {
         files: {
-          'prod/index.html': ['index.html']
+          'prod/TechWeek-2015/index.html': ['index.html']
         }
       }
     },
 		copy: {
 			main: {
 				files: [
-					{expand:true, src: ['css/imgs/**/*'], dest:'prod/'}
+					{expand:true, src: ['css/imgs/**/*'], dest:'prod/TechWeek-2015/'}
 				]
 			}
 		}
