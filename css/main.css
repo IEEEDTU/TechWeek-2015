@@ -942,49 +942,55 @@ section:nth-of-type(1) {
 }
 
 .event_00 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/design.jpg");
 	background-position: 50% 0;
 }
 
 .event_01 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/dip.jpg");
 	background-position: 50% 0;
 }
 
 .event_02 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/anim.jpg");
 	background-position: 50% 0;
 }
 
 .event_03 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/");
 	background-position: 50% 0;
 }
 
 .event_04 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/robotics.jpg");
 	background-position: 50% 0;
 }
 
 .event_05 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/prog.jpg");
 	background-position: 50% 0;
 }
 
 .event_06 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/oss.jpg");
 	background-position: 50% 0;
 }
 
 .event_07 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/webd.jpg");
 	background-position: 50% 0;
 }
 
 .event_08 .asset-1 {
-	background-image: url("imgs/aphex-twin.jpg");
+	background-image: url("imgs/event_backgrounds/solidworks.jpg");
 	background-position: 50% 0;
 }
+
+.event_09 .asset-1 {
+	background-image: url("imgs/event_backgrounds/wattack.jpg");
+	background-position: 50% 0;
+}
+
 
 @media (min-width: 700px) {
 	.event_00 .copy .wrap,

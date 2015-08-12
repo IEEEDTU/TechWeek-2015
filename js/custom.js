@@ -5,41 +5,45 @@ var url = window.location.href;
 var obj = {
 	"urls": [
 		{
-			"linkfrom": "programming",
+			"linkfrom": "designing",
 			"linkto": 5
 		},
 		{
-			"linkfrom": "robotics",
+			"linkfrom": "matlab",
 			"linkto": 6
 		},
 		{
-			"linkfrom": "oss",
+			"linkfrom": "animation",
 			"linkto": 7
 		},
 		{
-			"linkfrom": "webd",
+			"linkfrom": "currentx",
 			"linkto": 8
 		},
 		{
-			"linkfrom": "solidworks",
+			"linkfrom": "robotics",
 			"linkto": 9
 		},
 		{
-			"linkfrom": "animation",
+			"linkfrom": "programming",
 			"linkto": 10
 		},
 		{
-			"linkfrom": "wattack",
+			"linkfrom": "oss",
 			"linkto": 11
 		},
 		{
-			"linkfrom": "designing",
+			"linkfrom": "webd",
 			"linkto": 12
 		},
 		{
-			"linkfrom": "dip",
+			"linkfrom": "solidworks",
 			"linkto": 13
-		}
+		},
+        {
+            "linkfrom": "wattack",
+            "linkto": 14
+        }
 		  ]
 };
 
@@ -52,7 +56,7 @@ $(document).ready(function () {
 		console.log(url);
 		var eventurl = url.slice(url.lastIndexOf("#") + 1); // Gets the part of url after #.
 		var flag = false; //To check if eventurl is among the events.
-		for (i = 0; i < 9; i++) {
+		for (i = 0; i < 10; i++) {
 			if (obj.urls[i].linkfrom === eventurl) {
 				flag = true; //event found.
 				break;
@@ -85,7 +89,7 @@ function getVisibleChapter() {
 
 //Update hash
 function updateHash(upcoming) {
-	if (upcoming <= 13 && upcoming >= 5) {
+	if (upcoming <= 14 && upcoming >= 5) {
 		var nobj = {
 			"title": "",
 			"hash": "#" + obj.urls[upcoming - 5].linkfrom
