@@ -134,7 +134,7 @@ textarea {
 	margin-bottom:0px;
 	padding-top:40px;}
 select{
-		margin-top: 70px;
+		margin-top: 75px;
 		margin-left: 28px;
 		color: 	#808080;
 		font-size:18px;
@@ -146,6 +146,11 @@ select{
 select:hover{
 		border-color:#FF4500;
 }
+.error{
+		color: #ffffff;
+		font-size:15px;
+		margin-left:-240px;
+}
 
 </style>
 
@@ -153,6 +158,58 @@ select:hover{
 </head>
 
 <body>
+<?php
+
+$host="localhost";
+$user="root";
+$password="";
+$db = @mysql_connect($host, $user, $password) or die("Could not connect! Error:".mysql_error());
+@mysql_select_db('techweek') or die("Database Error:".mysql_error());
+
+
+$nameErr = $emailErr = $commentErr="";
+$name = $email = $comment="";
+
+
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   if (empty($_POST["name"])) {
+     $nameErr = "*Name is required";
+   } else {
+     $name = test_input($_POST["name"]);
+     // check if name only contains letters and whitespace
+     if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
+       $nameErr = " &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *Only letters and white space allowed"; 
+     }
+   }
+   
+   if (empty($_POST["email"])) {
+     $emailErr = "*Email is required";
+   } else {
+     $email = test_input($_POST["email"]);
+     // check if e-mail address is well-formed
+     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+       $emailErr = "*Invalid email format"; 
+     }
+   }
+   if (empty($_POST["comment"])) {
+     $commentErr = "&nbsp &nbsp *Comments are required";
+   } else {
+     $comment = test_input($_POST["comment"]);
+  }
+ }
+ function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+$query="INSERT INTO teck (`name`, `email`,`comment` ) VALUES (`$name`,`$email`,`$comment`)";
+@mysql_query($query);
+
+?>
+
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 
@@ -168,23 +225,22 @@ select:hover{
     
   
 
-      <form action="/" method="post">
+       <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 
 			<div class="outer">
           <center><div class="field-wrap">
-
-            <input style= "margin-bottom:5; margin-top:0px;"type="text" required autofocus autocomplete="off" placeholder="Name" />
+			<input type="text" required autocomplete="off" name="name" placeholder="Name" value="<?php echo $name;?>"autofocus/> <span class="error"> <?php echo $nameErr;?></span>	
           </div></center>
 
           
 			
         <center><div class="field-wrap">
 
-          <input style="margin-top:5px;" type="email" required autocomplete="off" placeholder="Email" />
-        </div></center>
+          <input style="margin-top:20px;" type="email" name="email" required autocomplete="off" placeholder="Email" value="<?php echo $email;?>"/><span class="error"> <?php echo $emailErr;?></span>
+		  </div></center>
 		<center><div class="field-wrap">
 
-          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 5px; wrap: virtual; height: 100px;"></textarea>
+          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 20px; wrap: virtual; height: 100px;" value="<?php echo $comment;?>"></textarea><span class="error"> <?php echo $commentErr;?></span>
         </div></center>
 		<div class="field-wrap">
 		<select>
@@ -208,5 +264,4 @@ select:hover{
 		</div>
 		
 </body>
-
 </html>
