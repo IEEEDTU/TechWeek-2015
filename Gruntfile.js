@@ -26,7 +26,8 @@ module.exports = function (grunt) {
 		copy: {
 			main: {
 				files: [
-					{expand:true, src: ['css/imgs/**/*'], dest:'prod/TechWeek-2015/'}
+					{expand:true, src: ['css/imgs/**/*'], dest:'prod/TechWeek-2015/'},
+					{expand:true, src: ['feedback_form/**/*'], dest:'prod/TechWeek-2015/'}
 				]
 			}
 		}
