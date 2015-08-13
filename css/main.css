@@ -1253,9 +1253,9 @@ li.project a,
 	width: 180px;
 	border-radius: 10px;
 	background: hsla(170, 100%, 50%, 1);
-	background-size: 50%;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-size: 50% !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
 	text-align: center;
 	margin: 5px 20px;
 	padding: 0.8rem;
