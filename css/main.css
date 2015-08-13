@@ -636,6 +636,9 @@ li {
 	.social li.project a {
 		width: 120px;
 	}
+	.social li.project a:before {
+		content: "Last"
+	}
 	.social li.project a:hover {
 		width: 126px;
 	}
@@ -1194,11 +1197,11 @@ li.project a,
 
 }
 
-@media (max-width: 600px) {
+/*@media (max-width: 600px) {
 	.social {
 		visibility:hidden;
 	}
-}
+}*/
 .moments {
 	cursor: pointer
 }
@@ -1243,7 +1246,20 @@ li.project a,
 	margin: 5px 20px;
 	padding: 0.8rem;
 }
-
+.linkRect {
+	font-family: "Passero One";
+	font-size: 1.5rem;
+	display: inline-block;
+	width: 180px;
+	border-radius: 10px;
+	background: hsla(170, 100%, 50%, 1);
+	background-size: 50%;
+	background-position: center;
+	background-repeat: no-repeat;
+	text-align: center;
+	margin: 5px 20px;
+	padding: 0.8rem;
+}
 @media (max-width:600px) {
 	.row {
 		height: 60px;
@@ -1259,6 +1275,10 @@ li.project a,
 	.linkCircle {
 		width: 50px;
 		height: 50px;
+		margin: 5px;
+	}
+	.linkRect {
+		width: 100px;
 		margin: 5px;
 	}
 }
@@ -1298,9 +1318,9 @@ li.project a,
 	font-family: "New Rocker"
 }
 
-.social-right {
+/*.social-right {
 	display: none
-}
+}*/
 
 #logo2 {
 	background-image: url(imgs/final_page_logos/ieeelogo.svg);

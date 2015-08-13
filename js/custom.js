@@ -165,6 +165,14 @@ $(window).load(function () {
 			updateMaxHeight(nextChapter - 5);
 		});
 	});
+	
+	//To Last Page
+	$("li.project").click(function(e) {
+		e.preventDefault();
+		$($(sections[sections.length-1])).fadeIn();
+		$($(sections[getVisibleChapter()])).fadeOut();
+		$("button.trigger-forward").hide();
+	})
 
 });
 
