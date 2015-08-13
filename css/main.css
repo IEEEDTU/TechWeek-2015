@@ -1289,3 +1289,23 @@ li.project a,
 	color: inherit;
 	outline: none;
 }
+
+.subIEEE {
+	font-family: "New Rocker"
+}
+
+.social-right {
+	display: none
+}
+
+#logo2 {
+	background-image: url(imgs/final_page_logos/ieeelogo.svg);
+}
+
+#logo3 {
+	background-image: url(imgs/final_page_logos/ieee-logo.png)
+}
+
+#logo4 {
+	background-image: url(imgs/final_page_logos/dtu.png)
+}
