@@ -711,6 +711,7 @@ li {
 .asset {
 	position: absolute;
 	background-color: #081245;
+    opacity: 0.5;
 }
 
 .copy {
@@ -957,7 +958,7 @@ section:nth-of-type(1) {
 }
 
 .event_03 .asset-1 {
-	background-image: url("imgs/event_backgrounds/");
+	background-image: url("imgs/event_backgrounds/currentx.jpg");
 	background-position: 50% 0;
 }
 
