@@ -1015,7 +1015,8 @@ section:nth-of-type(1) {
 .event_05 .copy .wrap,
 .event_06 .copy .wrap,
 .event_07 .copy .wrap,
-.event_08 .copy .wrap {
+.event_08 .copy .wrap,
+.event_09 .copy .wrap{
 	width: 100%;
 }
 
@@ -1025,6 +1026,9 @@ span.cName {
 
 span.cNum {
 	float: right;
+}
+span.cNum:before {
+	content: "+91";
 }
 
 .contact,

@@ -40,18 +40,18 @@ var obj = {
 			"linkfrom": "solidworks",
 			"linkto": 13
 		},
-        {
-            "linkfrom": "wattack",
-            "linkto": 14
-        }
-		  ]
+		{
+			"linkfrom": "wattack",
+			"linkto": 14
+		}
+	]
 };
 
 $(document).ready(function () {
 	'use strict';
 	//Fetch all sections and make queue
 	sections = $("section.moment"); //Tags array
-	//Event linking from url.	
+	//Event linking from url.
 	if (url.search("#") != -1) {
 		console.log(url);
 		var eventurl = url.slice(url.lastIndexOf("#") + 1); // Gets the part of url after #.
@@ -73,7 +73,7 @@ $(document).ready(function () {
 		}
 	}
 	else {
-		$("button.trigger-backward").hide();	
+		$("button.trigger-backward").hide();
 	}
 	return sections;
 });
@@ -162,7 +162,7 @@ $(window).load(function () {
 		$($(sections[visibleChapter])).fadeOut();
 		$($(sections[nextChapter])).fadeIn(function() {
 			updateHash(nextChapter);
-			updateMaxHeight(nextChapter - 5);	
+			updateMaxHeight(nextChapter - 5);
 		});
 	});
 
