@@ -1233,14 +1233,14 @@ li.project a,
 .row span:nth-of-type(5) {
 	font-family: 'New Rocker'
 }
-.linkCircle {
+.linkCircle, .linkRect {
 	display: inline-block;
 	width: 90px;
 	height: 90px;
 	background: hsla(170, 100%, 50%, 1);
-	background-size: 50%;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-size: 50%!important;
+	background-position: center!important;
+	background-repeat: no-repeat!important;
 	border-radius: 50%;
 	text-align: center;
 	margin: 5px 20px;
@@ -1249,16 +1249,9 @@ li.project a,
 .linkRect {
 	font-family: "Passero One";
 	font-size: 1.5rem;
-	display: inline-block;
 	width: 180px;
-	border-radius: 10px;
-	background: hsla(170, 100%, 50%, 1);
-	background-size: 50% !important;
-	background-position: center !important;
-	background-repeat: no-repeat !important;
-	text-align: center;
-	margin: 5px 20px;
-	padding: 0.8rem;
+	height: auto!important;
+	border-radius: 10px !important;
 }
 @media (max-width:600px) {
 	.row {
