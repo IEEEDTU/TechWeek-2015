@@ -53,7 +53,7 @@ $(document).ready(function () {
 	sections = $("section.moment"); //Tags array
 	//Event linking from url.
 	if (url.search("#") != -1) {
-		console.log(url);
+		//console.log(url);
 		var eventurl = url.slice(url.lastIndexOf("#") + 1).toLowerCase();// Gets the part of url after # and convert it into lower case.
 		var flag = false; //To check if eventurl is among the events.
 		for (i = 0; i < 10; i++) {
@@ -104,9 +104,9 @@ function updateMaxHeight(i) {
 	if (i >= 0 && i < 10) {
 		if (document.body.getBoundingClientRect().width <= 700) {
 			while (($(window).height() - ($($(".datevenue")[i]).offset().top + $($(".datevenue")[i]).height())) / $(window).height() > 0.12) {
-				console.log("running while");
+				//console.log("running while");
 				if ($(".eventDesc")[i].scrollHeight < parseInt(($($(".eventDesc")[i]).css("maxHeight")).substr(0, 3))) {
-					console.log("breaking");
+					//console.log("breaking");
 					break;
 				}
 				$($(".eventDesc")[i]).css("maxHeight", "+=1");
@@ -115,6 +115,9 @@ function updateMaxHeight(i) {
 	}
 }
 $(window).load(function () {
+	//Always be scrolled to top (IE wasn't updating max height due to this)
+	$("html, body").animate({scrollTop:0},0,false);
+	
 	//Toggle schedule visibility
 	$("button.view-all").click(function () {
 		$("div.moments-index").toggleClass("show");
@@ -177,6 +180,6 @@ $(window).load(function () {
 });
 
 $(window).resize(function() {
-		console.log("resized");
+		//console.log("resized");
 		updateMaxHeight(getVisibleChapter()-5);
 })
