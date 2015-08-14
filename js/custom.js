@@ -54,7 +54,7 @@ $(document).ready(function () {
 	//Event linking from url.
 	if (url.search("#") != -1) {
 		console.log(url);
-		var eventurl = url.slice(url.lastIndexOf("#") + 1); // Gets the part of url after #.
+		var eventurl = url.slice(url.lastIndexOf("#") + 1).toLowerCase();// Gets the part of url after # and convert it into lower case.
 		var flag = false; //To check if eventurl is among the events.
 		for (i = 0; i < 10; i++) {
 			if (obj.urls[i].linkfrom === eventurl) {
