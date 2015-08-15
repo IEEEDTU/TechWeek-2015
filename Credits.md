@@ -1,5 +1,6 @@
-### Cool people behind TechWeek 2015 Website
+### Cool people behind TechWeek 2015
 
+#### Web Team
 3rd Years :
 * Saksham Saxena
 * Jatin Malik
@@ -15,4 +16,25 @@
 * Kritika Verma
 * Swati Sheemar
 
-#### Special Thanks to Graphic Designing Team, Publications Team, PR Team and Organisors of TechWeek 2015 who all contributed in many little ways to make this year's TechWeek a sensation :blush:
+#### Designing Team
+3rd Years :
+* Surbhi Batra
+* Manmeet Kaur
+* Jatin Malik
+
+2nd Years :
+* Shubham Jain
+* Abhilasha Singh
+
+#### Publications Team
+
+3rd Years :
+* Chirag Arora
+* Garima Mishra
+* Shreya Mondol
+
+2nd Years :
+* Sirish Oruganti
+* Radhika Dang
+* Chandan
+* Kritika Nangia

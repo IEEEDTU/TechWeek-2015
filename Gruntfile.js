@@ -16,19 +16,29 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-    processhtml: {
-      dist: {
-        files: {
-          'prod/TechWeek-2015/index.html': ['index.html']
-        }
-      }
-    },
+		processhtml: {
+			dist: {
+				files: {
+					'prod/TechWeek-2015/index.html': ['index.html']
+				}
+			}
+		},
 		copy: {
 			main: {
 				files: [
 					{expand:true, src: ['css/imgs/**/*'], dest:'prod/TechWeek-2015/'},
 					{expand:true, src: ['feedback_form/**/*'], dest:'prod/TechWeek-2015/'}
 				]
+			}
+		},
+		includeSource: {
+			options: {
+				basePath: './'
+			},
+			myTarget: {
+				files: {
+					'prod/TechWeek-2015/index.html': 'index.html'
+				}
 			}
 		}
 	});
@@ -37,7 +47,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-processhtml');
+	grunt.loadNpmTasks('grunt-include-source');
 
-	grunt.registerTask('default', ['uglify', 'cssmin', 'processhtml', 'copy']);
+	grunt.registerTask('default', ['uglify', 'cssmin', 'processhtml', 'copy', 'includeSource']);
 
 };
