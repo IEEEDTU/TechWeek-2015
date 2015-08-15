@@ -36,3 +36,8 @@ Fresh out of school and just stepping into the unchartered territory of technolo
 
 ### Current X(TW1GFx)
 
+So you think you're up to date with the latest who's who and what's what? Do movies like the Wolf of Wall Street and Moneyball excite you to the core? The Current X workshop is an opportunity to explore and hone the managerial and leadership skills in you. The event promises to be an interactive amalgam of group discussions, guesstimates and insights into the world of business. Walk in the doors as a meek student. Walk out on a path to being a roaring corporate.
+
+### VLSI
+
+Very-large-scale integration (VLSI) is the process of creating integrated circuits by combining thousands of transistors into a single chip. VLSI began in the 1970s when complex semiconductor and communication technologies were being developed. The microprocessor is a VLSI device. In this course we will cover all the important topics of VLSI Technology such as VLSI design flow, ICs, MOS transistors, Fabrication technology etc. as well as HDL programming language i.e. VHDL and Verilog. We shall cover the basic programming concepts of VHDL for designing the sequential circuits as well as combination circuits. 
