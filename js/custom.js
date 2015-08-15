@@ -125,7 +125,7 @@ $(window).load(function () {
 	
 	//Contact
 	$("div.linkRect").click(function (e) {
-		console.log("here");
+		//console.log("here");
 		$("div.get").toggleClass("show");
 	});
 	$("span.cross").click(function () {

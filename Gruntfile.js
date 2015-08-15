@@ -19,7 +19,7 @@ module.exports = function (grunt) {
 		processhtml: {
 			dist: {
 				files: {
-					'prod/TechWeek-2015/index.html': ['index.html']
+					'prod/TechWeek-2015/index.html': ['prod/TechWeek-2015/index.html']
 				}
 			}
 		},
@@ -27,7 +27,8 @@ module.exports = function (grunt) {
 			main: {
 				files: [
 					{expand:true, src: ['css/imgs/**/*'], dest:'prod/TechWeek-2015/'},
-					{expand:true, src: ['feedback_form/**/*'], dest:'prod/TechWeek-2015/'}
+					{expand:true, src: ['feedback_form/**/*'], dest:'prod/TechWeek-2015/'},
+					{expand:true, src: ['js/ga.js'], dest:'prod/TechWeek-2015/'}
 				]
 			}
 		},
@@ -49,6 +50,6 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-processhtml');
 	grunt.loadNpmTasks('grunt-include-source');
 
-	grunt.registerTask('default', ['uglify', 'cssmin', 'processhtml', 'copy', 'includeSource']);
+	grunt.registerTask('default', ['uglify', 'cssmin', 'copy', 'includeSource']);
 
 };
