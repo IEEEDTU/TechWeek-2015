@@ -412,6 +412,13 @@ li {
 	display: inline-block;
 }
 
+.get li {
+	display: list-item;
+	clear: both;
+	cursor: auto;
+	text-align: center
+}
+
 .moments-index-list .box2 {
 	margin: 0em 0em;
 	margin-left: 0em;
@@ -478,10 +485,16 @@ li {
 	left: -100%;
 }
 
+.moments-index.get {
+	left: -100%;
+}
+.moments-index.get .moments-index-title {
+	left: -100%;
+}
+
 .moments-index.show {
 	left: 0
 }
-
 @media (min-width: 700px) {
 	.moments-index.show .moments-index-title {
 		left: 2rem
@@ -519,6 +532,7 @@ li {
 		padding-bottom: 1rem;
 		float: left
 	}
+
 	.moments-index-list a {
 		font-weight: 200
 	}
@@ -528,6 +542,9 @@ li {
 	.moments-index-list {
 		padding: 3rem auto 1rem;
 		float: left;
+	}
+	.get .moments-index-list {
+		float: none !important
 	}
 }
 
@@ -567,6 +584,17 @@ li {
 		background-image: -o-linear-gradient(transparent 75%, transparent);
 		background-image: linear-gradient(transparent 75%, transparent);
 	}
+}
+
+.cross {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	height: 50px;
+	width: 50px;
+	cursor: pointer;
+	background: url(imgs/cross.svg) no-repeat;
+	background-size: contain;
 }
 
 .social {
@@ -1255,6 +1283,7 @@ li.project a,
 	width: 180px;
 	height: auto!important;
 	border-radius: 10px !important;
+	cursor: pointer
 }
 @media (max-width:600px) {
 	.row {
@@ -1313,13 +1342,6 @@ li.project a,
 .subIEEE {
 	font-family: "New Rocker"
 }
-.moments-index.get {
-	left: -100%;
-}
-.moments-index.get .moments-index-title {
-	left: -100%;
-}
-
 
 /*.social-right {
 	display: none

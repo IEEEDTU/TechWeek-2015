@@ -122,9 +122,15 @@ $(window).load(function () {
 	$("button.view-all").click(function () {
 		$("div.yir-hide").toggleClass("show");
 	});
-	$(".row").click(function () {
+	
+	//Contact
+	$("div.linkRect").click(function (e) {
+		console.log("here");
 		$("div.get").toggleClass("show");
 	});
+	$("span.cross").click(function () {
+		$("div.get").toggleClass("show");
+	})
 
 	//Forward and back btn functions
 	$("button.js-trigger").click(function () {
