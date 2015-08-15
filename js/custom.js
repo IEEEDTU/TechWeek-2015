@@ -169,7 +169,7 @@ $(window).load(function () {
 	$("li.moments").click(function () {
 		var nextChapter = parseInt($(this).data("moment").substr(6, 8)) + 5;
 		var visibleChapter = getVisibleChapter(); //current chapter visible
-		$("div.moments-index").toggleClass("show");
+		$("div.yir-hide").toggleClass("show");
 		$("button.trigger-backward").show();
 		$($(sections[visibleChapter])).fadeOut();
 		$($(sections[nextChapter])).fadeIn(function() {
