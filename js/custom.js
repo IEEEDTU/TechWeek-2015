@@ -120,7 +120,10 @@ $(window).load(function () {
 	
 	//Toggle schedule visibility
 	$("button.view-all").click(function () {
-		$("div.moments-index").toggleClass("show");
+		$("div.yir-hide").toggleClass("show");
+	});
+	$(".row").click(function () {
+		$("div.get").toggleClass("show");
 	});
 
 	//Forward and back btn functions
@@ -176,7 +179,9 @@ $(window).load(function () {
 		$($(sections[getVisibleChapter()])).fadeOut();
 		$("button.trigger-forward").hide();
 	})
-
+	
+	
+	
 });
 
 $(window).resize(function() {

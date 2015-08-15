@@ -1313,6 +1313,13 @@ li.project a,
 .subIEEE {
 	font-family: "New Rocker"
 }
+.moments-index.get {
+	left: -100%;
+}
+.moments-index.get .moments-index-title {
+	left: -100%;
+}
+
 
 /*.social-right {
 	display: none
