@@ -29,7 +29,7 @@ var obj = {
 			"linkto": 10
 		},
 		{
-			"linkfrom": "oss",
+			"linkfrom": "softdev",
 			"linkto": 11
 		},
 		{
@@ -37,7 +37,7 @@ var obj = {
 			"linkto": 12
 		},
 		{
-			"linkfrom": "webd",
+			"linkfrom": "webdev",
 			"linkto": 13
 		},
         {
@@ -105,7 +105,7 @@ function updateHash(upcoming) {
 
 //Update event description box height
 function updateMaxHeight(i) {
-	if (i >= 0 && i < 10) {
+	if (i >= 0 && i <= 10) {
 		if (document.body.getBoundingClientRect().width <= 700) {
 			while (($(window).height() - ($($(".datevenue")[i]).offset().top + $($(".datevenue")[i]).height())) / $(window).height() > 0.12) {
 				//console.log("running while");

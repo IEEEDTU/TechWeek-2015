@@ -16,13 +16,6 @@ module.exports = function (grunt) {
 				}
 			}
 		},
-		processhtml: {
-			dist: {
-				files: {
-					'prod/TechWeek-2015/index.html': ['prod/TechWeek-2015/index.html']
-				}
-			}
-		},
 		copy: {
 			main: {
 				files: [
@@ -41,15 +34,31 @@ module.exports = function (grunt) {
 					'prod/TechWeek-2015/index.html': 'index.html'
 				}
 			}
+		},
+		processhtml: {
+			dist: {
+				files: {
+					'prod/TechWeek-2015/index.html': ['prod/TechWeek-2015/index.html']
+				}
+			}
+		},
+		prettify: {
+			options: {
+				indent: 4
+			},
+			files: {
+				'prod/TechWeek-2015/index.html': ['prod/TechWeek-2015/index.html']
+			}
 		}
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-processhtml');
 	grunt.loadNpmTasks('grunt-include-source');
+	grunt.loadNpmTasks('grunt-processhtml');
+	grunt.loadNpmTasks('grunt-prettify');
 
-	grunt.registerTask('default', ['uglify', 'cssmin', 'copy', 'includeSource']);
+	grunt.registerTask('default', ['uglify', 'cssmin', 'copy', 'includeSource', 'processhtml', 'prettify']);
 
 };
