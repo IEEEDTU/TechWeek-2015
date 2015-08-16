@@ -1011,19 +1011,25 @@ section:nth-of-type(1) {
 }
 
 .event_07 .asset-1 {
-	background-image: url("imgs/event_backgrounds/webd.jpg");
-	background-position: 50% 0;
-}
-
-.event_08 .asset-1 {
 	background-image: url("imgs/event_backgrounds/solidworks.jpg");
 	background-position: 50% 0;
 }
 
+.event_08 .asset-1 {
+	background-image: url("imgs/event_backgrounds/webd.jpg");
+	background-position: 50% 0;
+}
+
 .event_09 .asset-1 {
+	background-image: url("imgs/event_backgrounds/vlsi.jpg");
+	background-position: 50% 0;
+}
+
+.event_10 .asset-1 {
 	background-image: url("imgs/event_backgrounds/wattack.jpg");
 	background-position: 50% 0;
 }
+
 
 
 @media (min-width: 700px) {

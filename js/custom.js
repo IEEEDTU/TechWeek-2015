@@ -33,16 +33,20 @@ var obj = {
 			"linkto": 11
 		},
 		{
-			"linkfrom": "webd",
+			"linkfrom": "solidworks",
 			"linkto": 12
 		},
 		{
-			"linkfrom": "solidworks",
+			"linkfrom": "webd",
 			"linkto": 13
+		},
+        {
+			"linkfrom": "vlsi",
+			"linkto": 14
 		},
 		{
 			"linkfrom": "wattack",
-			"linkto": 14
+			"linkto": 15
 		}
 	]
 };
@@ -56,7 +60,7 @@ $(document).ready(function () {
 		//console.log(url);
 		var eventurl = url.slice(url.lastIndexOf("#") + 1).toLowerCase();// Gets the part of url after # and convert it into lower case.
 		var flag = false; //To check if eventurl is among the events.
-		for (i = 0; i < 10; i++) {
+		for (i = 0; i < 11; i++) {
 			if (obj.urls[i].linkfrom === eventurl) {
 				flag = true; //event found.
 				break;
@@ -89,7 +93,7 @@ function getVisibleChapter() {
 
 //Update hash
 function updateHash(upcoming) {
-	if (upcoming <= 14 && upcoming >= 5) {
+	if (upcoming <= 15 && upcoming >= 5) {
 		var nobj = {
 			"title": "",
 			"hash": "#" + obj.urls[upcoming - 5].linkfrom
