@@ -3,10 +3,8 @@
 #### Web Team
 3rd Years :
 * Jatin Malik
-* Nikunj Sabharwal
 * Saksham Saxena
 * Vaibhav Sawhney
-* Vinika Gupta
 
 2nd Years :
 * Abhilasha Singh
@@ -16,14 +14,18 @@
 * Rashi Goel
 * Swati Sheemar
 
-#### Designing Team
+#### Graphic Designing Team
 3rd Years :
+* Jasminder Singh
 * Jatin Malik
 * Manmeet Kaur
+* Megha Rohilla
 * Surbhi Batra
 
 2nd Years :
 * Abhilasha Singh
+* Poornima Sancheti
+* Rashi Goel
 * Shubham Jain
 
 #### Publications Team
@@ -34,7 +36,7 @@
 * Shreya Mondol
 
 2nd Years :
-* Chandan
+* Chandan Barnwal
 * Kritika Nangia
 * Radhika Dang
 * Sirish Oruganti
