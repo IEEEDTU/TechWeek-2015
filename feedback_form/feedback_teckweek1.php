@@ -167,9 +167,9 @@ $db = @mysql_connect($host, $user, $password) or die("Could not connect! Error:"
 @mysql_select_db('techweek') or die("Database Error:".mysql_error());
 
 
+
 $nameErr = $emailErr = $commentErr="";
 $name = $email = $comment="";
-
 
 
 
@@ -205,8 +205,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
    $data = htmlspecialchars($data);
    return $data;
 }
-$query="INSERT INTO teck (`name`, `email`,`comment` ) VALUES (`$name`,`$email`,`$comment`)";
-@mysql_query($query);
+
+
+$query="INSERT INTO teck (`name`, `email`,`comment` ) VALUES ('$name','$email','$comment')";
+mysql_query($query) or die(mysql_error());
 
 ?>
 
@@ -240,16 +242,16 @@ $query="INSERT INTO teck (`name`, `email`,`comment` ) VALUES (`$name`,`$email`,`
 		  </div></center>
 		<center><div class="field-wrap">
 
-          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 20px; wrap: virtual; height: 100px;" value="<?php echo $comment;?>"></textarea><span class="error"> <?php echo $commentErr;?></span>
+          <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 20px; wrap: virtual; height: 100px;" ><?php echo $comment;?></textarea><span class="error"> <?php echo $commentErr;?></span>
         </div></center>
-		<div class="field-wrap">
+		<!--<div class="field-wrap">
 		<select>
 			<option value="1">Option 1</option>
 			<option value="2">Option 2</option>
 			<option value="3">Option 3</option>
 			<option value="4">Option 4</option>
 		</select>
-		</div>
+		</div>-->
 		
 		<center><div id= "bottom">
 		<p style="text-align:center; color:#ffffff; font-size: 20px; font-family:Kaushan script; letter-spacing:0.5px; color:rgb(46, 46, 120);">Thanks for filling in the form!</p>
