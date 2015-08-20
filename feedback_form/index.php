@@ -5,16 +5,11 @@
   box-sizing: border-box;
 }
 
-html {
-  overflow-y: scroll;
-}
-
 body {
   
   font-family: 'Titillium Web', sans-serif;
   background-size:100% 100%;
-  background-opacity:0.6;
-  background: url('16308-NQLOOE.jpg');
+  background: url('ffbg.jpg');
  
 }
 
@@ -36,7 +31,6 @@ body {
   padding: 10px;
   color:  #ffffff;
   font-size: 30px;
-  align:center;
   width: 400px;;
   text-align: center;
   outline: 2px solid #ffffff;
@@ -48,20 +42,19 @@ body {
 
 ::-webkit-input-placeholder {
 color: 	#C0C0C0;
-font-family:Comic Sans MS;}
+font-family:Verdana;}
 
 
 input, textarea {
   font-size: 22px;
   display: block;
   width: 88%;
-  height: 100%;
   padding: 5px 10px;
   background: none;
   opacity:0.8;
   border: 2px solid rgb(46, 46, 120);
-  font-family: Comic Sans MS;
-  text-color: #000000;
+  font-family: Verdana;
+  color: #000000;
   border-radius: 0;
   -webkit-transition: border-color .25s ease, box-shadow .25s ease;
           transition: border-color .25s ease, box-shadow .25s ease;
@@ -93,7 +86,7 @@ textarea {
   border-radius: 5px;
   font-size: 1.8rem;
   font-weight: 600;
-  text-color:rgb(46, 46, 120);
+    color:rgb(46, 46, 120);
   letter-spacing: .1em;
   background: transparent;
   text-decoration: none;
@@ -118,7 +111,6 @@ textarea {
 
 
 #bottom{
-	\\background:rgb(46, 46, 120);
 	background: transparent;
 	padding:40px ;
 	padding-top: 10px;
@@ -138,7 +130,7 @@ select{
 		margin-left: 28px;
 		color: 	#808080;
 		font-size:18px;
-		font-family:Comic Sans MS;
+		font-family:Verdana;
 		padding:8px;
 		border:solid 2px rgb(46, 46, 120);
 
@@ -170,14 +162,15 @@ $db = @mysql_connect($host, $user, $password) or die("Could not connect! Error:"
 
 $nameErr = $emailErr = $commentErr="";
 $name = $email = $comment="";
-
-
+$event = "";
+$subb = $_POST["sub"];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
    if (empty($_POST["name"])) {
      $nameErr = "*Name is required";
    } else {
      $name = test_input($_POST["name"]);
+       $event = $_POST["event"];
      // check if name only contains letters and whitespace
      if (!preg_match("/^[a-zA-Z ]*$/",$name)) {
        $nameErr = " &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *Only letters and white space allowed"; 
@@ -207,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-$query="INSERT INTO teck (`name`, `email`,`comment` ) VALUES ('$name','$email','$comment')";
+$query="INSERT INTO teck (`name`, `email`,`comment`,`event`) VALUES ('$name','$email','$comment', '$event')";
 mysql_query($query) or die(mysql_error());
 
 ?>
@@ -244,18 +237,20 @@ mysql_query($query) or die(mysql_error());
 
           <textarea name="comment" placeholder= "Your Comments.." cols="10"  style="margin-top: 20px; wrap: virtual; height: 100px;" ><?php echo $comment;?></textarea><span class="error"> <?php echo $commentErr;?></span>
         </div></center>
-		<!--<div class="field-wrap">
-		<select>
-			<option value="1">Option 1</option>
-			<option value="2">Option 2</option>
-			<option value="3">Option 3</option>
-			<option value="4">Option 4</option>
+		<div class="field-wrap">
+		<select name="event">
+			<option value="gd">Graphic Designing</option>
+			<option value="matlab">MATLAB</option>
+			<!--<option value="3">Option 3</option>
+			<option value="4">Option 4</option>-->
 		</select>
-		</div>-->
+		</div>
 		
 		<center><div id= "bottom">
-		<p style="text-align:center; color:#ffffff; font-size: 20px; font-family:Kaushan script; letter-spacing:0.5px; color:rgb(46, 46, 120);">Thanks for filling in the form!</p>
-		<button type="submit" class="button button-block">Submit</button>
+		<?php
+            if(isset($_POST['sub'])){ echo
+            '<p style="text-align:center; font-size: 20px; font-family:Kaushan script; letter-spacing:0.5px; color:rgb(46, 46, 120);">Thanks for filling in the form!</p>';}?>
+		<input type="submit" name="sub" value="Submit" class="button button-block">
 
 
 
