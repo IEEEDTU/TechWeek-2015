@@ -201,7 +201,7 @@ button {
 .full-viewport-hero__content .subtitle {
 	font-family: 'Germania One';
 	font-weight: normal;
-	margin-bottom: 20px;
+	margin: 0.2em auto;
 }
 
 @media screen and (min-width: 640px) {
